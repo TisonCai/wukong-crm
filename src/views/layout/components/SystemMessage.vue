@@ -87,24 +87,19 @@
       </div>
     </slide-view>
 
-    <new-dialog
-      v-if="announcementAddShow"
-      @onSubmit="announcementSubmiteSuccess"
-      @close="announcementAddShow = false" />
-
     <!-- CRM详情 -->
     <c-r-m-full-screen-detail
       :visible.sync="showFullDetail"
       :crm-type="relationCrmType"
       :id="relationID" />
 
-    <today-list-detail
+      <!-- <today-list-detail
       :id="relationID"
       :show-today-detail="showTodayDetail"
       :today-detail-data="todayDetailData"
       @deleteSuccess="todayHandle"
       @createSuccess="todayHandle"
-      @close="showTodayDetail = false"/>
+      @close="showTodayDetail = false"/> -->
   </div>
 </template>
 
@@ -118,9 +113,7 @@ import {
 import {
   crmDownImportErrorAPI
 } from '@/api/crm/common'
-import TodayListDetail from '@/views/calendar/components/TodayListDetail'
 import SlideView from '@/components/SlideView'
-import NewDialog from '@/views/oa/notice/NewDialog'
 import MessageCell from './MessageCell'
 
 import { getMaxIndex, downloadExcelWithResData } from '@/utils/index'
@@ -131,9 +124,7 @@ export default {
   name: 'SystemMessage',
   components: {
     SlideView,
-    NewDialog,
     MessageCell,
-    TodayListDetail,
     CRMFullScreenDetail: () =>
       import('@/components/CRMFullScreenDetail')
   },

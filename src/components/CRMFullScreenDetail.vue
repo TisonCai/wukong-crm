@@ -23,10 +23,6 @@ import BusinessDetail from '@/views/crm/business/Detail'
 import ContractDetail from '@/views/crm/contract/Detail'
 import ProductDetail from '@/views/crm/product/Detail'
 import ReceivablesDetail from '@/views/crm/receivables/Detail'
-import ExamineDetail from '@/views/oa/examine/components/ExamineDetail'
-import TaskDetail from '@/views/taskExamine/task/components/TaskDetail'
-import LogDetail from '@/views/workLog/components/LogDetail'
-import NoticeDetail from '@/views/oa/notice/NoticeDetail'
 import VisitDetail from '@/views/crm/visit/Detail'
 import InvoiceDetail from '@/views/crm/invoice/Detail'
 
@@ -40,10 +36,6 @@ export default {
     ContractDetail,
     ProductDetail,
     ReceivablesDetail,
-    ExamineDetail,
-    TaskDetail,
-    LogDetail,
-    NoticeDetail,
     VisitDetail,
     InvoiceDetail
   },

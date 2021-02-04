@@ -65,5 +65,5 @@ export default router
 export const asyncRouterMap = [
   { type: 'crm', router: crmRouter },
   { type: 'bi', router: biRouter },
-  { type: 'manage', router: adminRouter },
+  { type: 'manage', router: adminRouter }
 ]

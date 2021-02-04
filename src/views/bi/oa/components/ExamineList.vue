@@ -23,12 +23,12 @@
         infinite-scroll-distance="100"
         infinite-scroll-disabled="scrollDisabled">
 
-        <examine-cell
+        <!-- <examine-cell
           v-for="(item, index) in list"
           :key="index"
           :data="item"
           :show-handle="false"
-          @on-handle="examineCellHandle"/>
+          @on-handle="examineCellHandle"/> -->
         <p
           v-if="loading"
           class="scroll-bottom-tips">加载中...</p>
@@ -49,7 +49,6 @@
 
 <script>
 import SlideView from '@/components/SlideView'
-import ExamineCell from '@/views/oa/examine/components/ExamineCell'
 
 export default {
   /** 审批统计 列表 */
@@ -57,7 +56,6 @@ export default {
 
   components: {
     SlideView,
-    ExamineCell,
     CRMFullScreenDetail: () =>
       import('@/components/CRMFullScreenDetail')
   },

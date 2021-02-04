@@ -33,15 +33,6 @@
           @send="sendLog"
           @focus="handleType = 'log'"
           @close="handleClick(handleType)" />
-
-        <task-quick-add
-          v-else
-          ref="taskAdd"
-          :params="taskParams"
-          :props="taskProps"
-          class="task-quick-add"
-          @focus="handleType = 'task'"
-          @send="refreshLogList" />
       </template>
 
       <div :class="{'is-top': handle && handle.length == 0}" class="log">
@@ -183,7 +174,6 @@ import LogAdd from './LogAdd'
 import LogCell from './LogCell'
 import LogEditDialog from './LogEditDialog'
 import CRMAllCreate from '@/views/crm/components/CRMAllCreate'
-import TaskQuickAdd from '@/views/taskExamine/task/components/TaskQuickAdd'
 import crmTypeModel from '@/views/crm/model/crmTypeModel'
 
 import { objDeepCopy } from '@/utils'
@@ -199,7 +189,6 @@ export default {
     LogAdd,
     LogCell,
     CRMAllCreate,
-    TaskQuickAdd,
     TimeTypeSelect,
     LogEditDialog,
     CRMFullScreenDetail: () =>
